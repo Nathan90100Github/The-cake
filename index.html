@@ -1,3 +1,51 @@
 <html>
-    <header>You have 0 messages.</header>
+    <script src="js/stats.js"></script>
+    <script src="buttons.css"></script>
+    <title>The Cake</title>
+    <head>
+        <div style="text-align:center;">
+            <font face="Dubai Medium" size = 4>
+                <message1>You have </message1>
+            </font>
+            <font face="Dubai Medium" size = 6>
+                <span id = messagecount>0</span>
+            </font>
+            <font face="Dubai Medium" size = 4>
+                <message2> messages</message2>
+            </font>
+            <br>
+            <font face="Dubai Medium" size = 2>
+                <span id = clickmessage>1</span>
+                <messageclick> messages per click</messageclick>
+                <br>
+                <span id = passivemessage>0</span>
+                <messageincome> messages per second</messageincome>
+            </font>
+        </div>
+        <div style="text-align:center;">
+                <button id="sendbutton" onclick="incrementButton()">
+                    Send a message.
+                </button>
+        </div>
+    </head>
+    <body>
+        <button id = upg1 onclick="upgrade111()">
+            [1-1-1]
+            <br>
+            Get better at sending messages.
+            <br>
+            +2 messages per click.
+            <br>
+            Cost: 20 messages.
+        </button>
+        <button id = upg2 display = "none" onclick="upgrade112()">
+            [1-1-2]
+            <br>
+            Code a bot to send messages every second!
+            <br>
+            +1 click per second.
+            <br>
+            Cost: 150 messages.
+        </button>
+    </body>
 </html>
