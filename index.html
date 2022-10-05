@@ -17,9 +17,6 @@
             <font face="Dubai Medium" size = 2>
                 <span id = clickmessage>1</span>
                 <messageclick> messages per click</messageclick>
-                <br>
-                <span id = passivemessage>0</span>
-                <messageincome> messages per second</messageincome>
             </font>
         </div>
         <div style="text-align:center;">
@@ -31,7 +28,7 @@
     <body>
         <font face="Dubai Medium" size = 3><warning>These upgrades are only bought </warning></font>
         <font face="Dubai Medium" size = 5><warning>ONCE! <br></warning></font>
-        <button id = upg1 onclick="upgrade111()">
+        <button id = upg111 onclick="upgrade111()">
             [1-1-1]
             <br>
             Get better at sending messages.
@@ -40,14 +37,23 @@
             <br>
             Cost: 20 messages.
         </button>
-        <button id = upg2 display = "none" onclick="upgrade112()">
+        <button id = upg112 onclick="upgrade112()">
             [1-1-2]
             <br>
-            Code a bot to send messages every second!
+            Gain more messages based on your messages
             <br>
-            +1 click per second.
+            log10(messages)+1 message multiplier. Rounded to the hundredth.
             <br>
             Cost: 150 messages.
+        </button>
+        <button id = upg113 onclick="upgrade113()">
+            [1-1-3]
+            <br>
+            Gain more messages based on your clicks.
+            <br>
+            (log10(clicks)*2.5)+1 message multiplier. Rounded to the hundredth.
+            <br>
+            Cost: 1000 messages.
         </button>
     </body>
 </html>
