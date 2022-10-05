@@ -1,20 +1,101 @@
 <html>
     <script src="js/stats.js"></script>
-    <script src="buttons.css"></script>
+    <link src="buttons.css"></link>
     <title>The Cake</title>
     <head>
+        <style>
+            #background {
+                background-color: black;
+                padding: 50% 50%
+            }
+            #sendbutton {
+                background-color: #1f1f1f;
+                border: black;
+                color: #949494;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+                
+            }
+            #upg111 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+            #upg112 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+            #upg113 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+            #upg121 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+            #upg122 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+            #upg123 {
+                background: rgb(97,0,0);
+                border: solid black 2px;
+                color: #949494;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-family: Dubai Medium;
+            }
+        </style>
+    </head>
+    <body>
+        <element id="background"></element>
         <div style="text-align:center;">
-            <font face="Dubai Medium" size = 4>
+            <font face="Dubai Medium" size = 4 color = white>
                 <message1>You have </message1>
             </font>
-            <font face="Dubai Medium" size = 6>
+            <font face="Dubai Medium" size = 6 color = white>
                 <span id = messagecount>0</span>
             </font>
-            <font face="Dubai Medium" size = 4>
+            <font face="Dubai Medium" size = 4 color = white>
                 <message2> messages</message2>
             </font>
             <br>
-            <font face="Dubai Medium" size = 2>
+            <font face="Dubai Medium" size = 2 color = white>
                 <span id = clickmessage>1</span>
                 <messageclick> messages per click</messageclick>
             </font>
@@ -24,11 +105,7 @@
                     Send a message.
                 </button>
         </div>
-    </head>
-    <body>
-        <font face="Dubai Medium" size = 3><warning>These upgrades are only bought </warning></font>
-        <font face="Dubai Medium" size = 5><warning>ONCE! <br></warning></font>
-        <button id = upg111 onclick="upgrade111()">
+        <button id="upg111" onclick="upgrade111()">
             [1-1-1]
             <br>
             Get better at sending messages.
@@ -37,7 +114,7 @@
             <br>
             Cost: 20 messages.
         </button>
-        <button id = upg112 onclick="upgrade112()">
+        <button id="upg112" onclick="upgrade112()">
             [1-1-2]
             <br>
             Gain more messages based on your messages
@@ -46,7 +123,7 @@
             <br>
             Cost: 150 messages.
         </button>
-        <button id = upg113 onclick="upgrade113()">
+        <button id="upg113" onclick="upgrade113()">
             [1-1-3]
             <br>
             Gain more messages based on your clicks.
@@ -56,7 +133,7 @@
             Cost: 1000 messages.
         </button>
         <br>
-        <button id = upg121 onclick="upgrade121()">
+        <button id="upg121" onclick="upgrade121()">
             [1-2-1]
             <br>
             Your upgrades multiply message gain by 1.2 each time!
@@ -65,7 +142,7 @@
             <br>
             Cost: 3000 messages.
         </button>
-        <button id = upg122 onclick="upgrade122()">
+        <button id="upg122" onclick="upgrade122()">
             [1-2-2]
             <br>
             Your upgrades add to message gain base!
@@ -74,7 +151,7 @@
             <br>
             Cost: 10K messages.
         </button>
-        <button id = upg123 onclick="upgrade123()">
+        <button id="upg123" onclick="upgrade123()">
             [1-2-3]
             <br>
             A nice little x2 multiplier to help!

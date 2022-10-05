@@ -21,26 +21,32 @@ function incrementButton() {
     if (upg111 == 1) {
         messagegain += 2
         ++upgs1
+        document.getElementById('upg111').style.backgroundColor = 106100
     }
     if (upg122 == 1) {
         ++upgs1
         messagegain += (upgs1*3)
+        document.getElementById('upg122').style.backgroundColor = 106100
     }
     if (upg112 == 1) {
         messagegain *= (Math.round(((Math.log10(messages+1))*100))/100+1)
         ++upgs1
+        document.getElementById('upg112').style.backgroundColor = 106100
     }
     if (upg113 == 1) {
         messagegain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
         ++upgs1
+        document.getElementById('upg113').style.backgroundColor = 106100
     }
     if (upg123 == 1) {
         messagegain *= 2
         ++upgs1
+        document.getElementById('upg123').style.backgroundColor = 106100
     }
     if (upg121 == 1) {
         ++upgs1
         messagegain *= Math.pow(1.2,upgs1)
+        document.getElementById('upg121').style.backgroundColor = 106100
     }
     messages += messagegain
     ++clicks
@@ -55,6 +61,7 @@ function incrementButton() {
                 messagegain += 2
                 document.getElementById('messagecount').innerHTML = messages;
                 document.getElementById('clickmessage').innerHTML = messagegain;
+                document.getElementById('upg111').style.backgroundColor = 106100
             }
         }
     }
@@ -65,6 +72,7 @@ function incrementButton() {
                 ++upg112
                document.getElementById('messagecount').innerHTML = messages;
                document.getElementById('clickmessage').innerHTML = messagegain;
+               document.getElementById('upg112').style.backgroundColor = 106100
             }
         }
     }
@@ -75,6 +83,7 @@ function incrementButton() {
                 ++upg113
                document.getElementById('messagecount').innerHTML = messages;
                document.getElementById('clickmessage').innerHTML = messagegain;
+               document.getElementById('upg113').style.backgroundColor = 106100
             }
         }
     }
@@ -85,6 +94,7 @@ function incrementButton() {
                 ++upg121
                document.getElementById('messagecount').innerHTML = messages;
                document.getElementById('clickmessage').innerHTML = messagegain;
+               document.getElementById('upg121').style.backgroundColor = 106100
             }
         }
     }
@@ -95,6 +105,7 @@ function incrementButton() {
                 ++upg122
                document.getElementById('messagecount').innerHTML = messages;
                document.getElementById('clickmessage').innerHTML = messagegain;
+               document.getElementById('upg122').style.backgroundColor = 106100
             }
         }
     }
@@ -105,6 +116,7 @@ function incrementButton() {
                 ++upg123
                document.getElementById('messagecount').innerHTML = messages;
                document.getElementById('clickmessage').innerHTML = messagegain;
+               document.getElementById('upg123').style.backgroundColor = 106100
             }
         }
     }
