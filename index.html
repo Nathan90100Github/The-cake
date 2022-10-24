@@ -6,7 +6,7 @@
         <style>
             #background {
                 background-color: black;
-                padding: 65% 50.61%;
+                padding: 80% 50.61%;
                 margin-left: -8px;
             }
             #sendbutton {
@@ -517,6 +517,96 @@
                 text-align: center;
                 font-family: Dubai Medium;
             }
+            #upg411 {
+                display: inline;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg412 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg413 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg421 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg422 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg423 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg431 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg432 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #upg433 {
+                display: none;
+                background: #727142;
+                color: #ffffff;
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                font-family: Dubai Medium;
+            }
+            #geticing {
+                background: #993333;
+                color: #000000;
+                text-align: center;
+                text-decoration: none;
+                display: inline;
+                font-size: 10px;
+                font-family: Dubai Medium;
+            }
             #ShortcutHeatEnd {
                 background: rgb(173, 104, 1);
                 background: linear-gradient(90deg, rgb(173, 104, 1) 0%, rgb(255, 238, 0) 100%);
@@ -540,6 +630,24 @@
             #Shortcut6Candles {
                 background: #089938;
                 background: linear-gradient(90deg, #089938 0%, #222222 50%, #205396 100%);
+                color: #000000;
+                text-align: center;
+                text-decoration: none;
+                display: inline;
+                font-size: 10px;
+                font-family: Dubai Medium;
+            }
+            #Shortcut12Candles {
+                background: #727142;
+                color: #000000;
+                text-align: center;
+                text-decoration: none;
+                display: inline;
+                font-size: 10px;
+                font-family: Dubai Medium;
+            }
+            #ShortcutIcing {
+                background: #792222;
                 color: #000000;
                 text-align: center;
                 text-decoration: none;
@@ -1056,6 +1164,188 @@
                     25M heat.
                 </button>
             </div>
+                <div style="text-align:center;" id="hidebeforeAC" hidden=hidden>
+                    <font face="Dubai Medium" size = 2 color = 444400>
+                        <doughgain>You gain</doughgain>
+                    </font>
+                    <font face="Dubai Medium" size = 4 color = 888800>
+                        <span id="doughgain"> 0 </span>
+                    </font>
+                    <font face="Dubai Medium" size = 2 color = 444400>
+                        <doughgain>dough per click.</doughgain>
+                        <br>
+                    </font>
+                    <font face="Dubai Medium" size = 2 color = 444400>
+                        <dough>You have </dough>
+                    </font>
+                    <font face="Dubai Medium" size = 4 color = 888800>
+                        <span id= dough>0</span>
+                </font>
+                <font face="Dubai Medium" size = 2 color = 444400>
+                    <dough> dough.<br></dough>
+                </font>
+                <button id="upg411" onclick="upgrade411()">
+                    [4-1-1]
+                    <br>
+                    Im running out of time.
+                    <br>
+                    x2 message gain.
+                    <br>
+                    100k dough.
+                </button>
+                <button id="upg412" onclick="upgrade412()">
+                    [4-1-2]
+                    <br>
+                    Less than an hour left
+                    <br>
+                    x2 heat gain.
+                    <br>
+                    250k dough.
+                </button>
+                <button id="upg413" onclick="upgrade413()">
+                    [4-1-3]
+                    <br>
+                    Dough and icing left to make
+                    <br>
+                    x2 dough gain.
+                    <br>
+                    500k dough.
+                </button>
+                <button id="upg421" onclick="upgrade421()">
+                    [4-2-1]
+                    <br>
+                    Just 9 upgrades for dough...
+                    <br>
+                    More messages based on heat
+                    <br>
+                    1.2M dough.
+                </button>
+                <button id="upg422" onclick="upgrade422()">
+                    [4-2-2]
+                    <br>
+                    ...and 9 upgrades for icing.
+                    <br>
+                    More heat based on dough
+                    <br>
+                    2M dough.
+                </button>
+                <button id="upg423" onclick="upgrade423()">
+                    [4-2-3]
+                    <br>
+                    Already done typing 6 of the 18
+                    <br>
+                    More dough based on messages
+                    <br>
+                    3.5M dough.
+                </button>
+                <button id="upg431" onclick="upgrade431()">
+                    [4-3-1]
+                    <br>
+                    Better descriptions and UI
+                    <br>
+                    1-1-3 applies again
+                    <br>
+                    15M dough.
+                </button>
+                <button id="upg432" onclick="upgrade432()">
+                    [4-3-2]
+                    <br>
+                    In v1.1
+                    <br>
+                    1-1-3 applies to messages and heat again
+                    <br>
+                    50M dough.
+                </button>
+                <button id="upg433" onclick="upgrade433()">
+                    [4-3-3]
+                    <br>
+                    Coming November 24th
+                    <br>
+                    1-1-3 applies to messages, heat and dough. Also unlock Icing.
+                    <br>
+                    100M dough.
+                </button>
+                <button id="geticing" onclick="geticing()">
+                    Get icing based on dough
+                    <br>
+                    please help me im so stressed idk if i'll finish this in time aaaaa
+                </button>
+            </div>
+            <div style="text-align:center;" id="hidebeforeicing" hidden=hidden>
+                <font face="Dubai Medium" size = 2 color = 792222>
+                    <icinggain>You will gain</icinggain>
+                </font>
+                <font face="Dubai Medium" size = 4 color = 993333>
+                    <span id="icinggain"> 0 </span>
+                </font>
+                <font face="Dubai Medium" size = 2 color = 792222>
+                    <icinggain>icing.</icinggain>
+                    <br>
+                </font>
+                <font face="Dubai Medium" size = 2 color = 792222>
+                    <icing>You have </icing>
+                </font>
+                <font face="Dubai Medium" size = 4 color = 993333>
+                    <span id= dough>0</span>
+            </font>
+            <font face="Dubai Medium" size = 2 color = 792222>
+                <icing> icing.<br></icing>
+            </font>
+            <button id="upg511" onclick="upgrade511()">
+                [5-1-1]
+                <br>
+                *listening to Here I Come because it's just too good*
+                <br>
+                x10 messages.
+                <br>
+                10 icing.
+            </button>
+            <button id="upg512" onclick="upgrade512()">
+                [5-1-2]
+                <br>
+                oh hey sorry uh yes 12 minutes left WAIT AYO THATS NOT A LOT
+                <br>
+                x5 heat.
+                <br>
+                15 icing.
+            </button>
+            <button id="upg513" onclick="upgrade513()">
+                [5-1-3]
+                <br>
+                HURRY UP NATHAN HURRY UUUUUUUUUUUUP!!!!
+                <br>
+                x3 dough.
+                <br>
+                20 icing.
+            </button>
+            <button id="upg521" onclick="upgrade521()">
+                [5-2-1]
+                <br>
+                FINISH THE GAME PLEASE
+                <br>
+                x2 icing
+                <br>
+                30 icing.
+            </button>
+            <button id="upg522" onclick="upgrade522()">
+                [5-2-2]
+                <br>
+                COME ON ALMOST THERE
+                <br>
+                5-1-1 5-1-2 5-1-3 and 5-2-1 apply again
+                <br>
+                70 icing.
+            </button>
+            <button id="upg523" onclick="upgrade523()">
+                [5-2-3]
+                <br>
+                [[[FINAL UPGRADE]]]
+                <br>
+                UNLOCK THE FOURTEEN TRIALS OF THE MEMBERS AND DOUBLE ICING AGAIN.
+                <br>
+                200 icing.
+            </button>
+        </div>
         </div>
         
     </body>
@@ -1087,7 +1377,25 @@
                 This will be removed once I add autosaving feature.
                 <br>
                 Shortcut 3: 6/12 candles.
-                </button>
+            </button>
+            <button id="Shortcut12Candles" onclick="AllCandlesSC()">
+                    SHORTCUT!
+                    <br>
+                    Only use to get back to a part of the game you've already gotten to.
+                    <br>
+                    This will be removed once I add autosaving feature.
+                    <br>
+                    Shortcut 4: Dough unlocked
+            </button>
+            <button id="ShortcutIcing" onclick="IcingSC()">
+                SHORTCUT!
+                <br>
+                Only use to get back to a part of the game you've already gotten to.
+                <br>
+                This will be removed once I add autosaving feature.
+                <br>
+                Shortcut 5: Icing unlocked
+            </button>
         </div>
     </legs>
 </html> 

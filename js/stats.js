@@ -7,6 +7,8 @@ var friendship = 1
 var heat = 0
 var friendshiplost = 0.5
 var heatgain = 0
+var dough = 0
+var doughgain = 0
 //    Upgrade stats (messages)
 var upg111 = 0
 var upg112 = 0
@@ -57,6 +59,23 @@ var upg323 = 0
 var upg324 = 0
 var upg325 = 0
 var upg326 = 0
+//    Upgrade stats (dough)
+var upg411 = 0
+var upg412 = 0
+var upg413 = 0
+var upg421 = 0
+var upg422 = 0
+var upg423 = 0
+var upg431 = 0
+var upg432 = 0
+var upg433 = 0
+//    Upgrade stats (icing)
+var upg511 = 0
+var upg512 = 0
+var upg513 = 0
+var upg521 = 0
+var upg522 = 0
+var upg523 = 0
 //    Upgrade stats (total)
 var upgs1 = 0
 var upgs2 = 0
@@ -65,6 +84,8 @@ var upgs3 = 0
 
 function incrementButton() {
     heatgain = Math.pow(1.225,Math.log10(messages)+1)*friendship
+    doughgain = ((Math.log(messages)-24)*(Math.log(heat)-12))
+    icinggain = Math.log10(dough)
     messagegain=1;
     upgs1=0;
     upgs2=0;
@@ -244,8 +265,64 @@ function incrementButton() {
         ++upgs3
         messagegain*=2
     }
+    if (upg411 == 1) {
+        messagegain *= 2
+    }
+    if (upg412 == 1) {
+        heatgain *= 2
+    }
+    if (upg413 == 1) {
+        doughgain *= 2
+    }
+    if (upg421 == 1) {
+        messagegain *= Math.log10(heat)
+    }
+    if (upg422 == 1) {
+        heatgain *= Math.log10(dough)
+    }
+    if (upg423 == 1) {
+        doughgain *= Math.log10(messages)
+    }
+    if (upg431 == 1) {
+        messagegain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+    }
+    if (upg432 == 1) {
+        messagegain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+        heatgain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+    }
+    if (upg433 == 1) {
+        messagegain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+        heatgain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+        doughgain *= (Math.round(((Math.log10(clicks+1))*110))/100+1)
+    }
+    if (upg511 == 1) {
+        messagegain *= 10
+    }
+    if (upg512 == 1) {
+        heatgain *= 5
+    }
+    if (upg513 == 1) {
+        doughgain *= 3
+    }
+    if (upg521 == 1) {
+        icinggain *= 2
+    }
+    if (upg522 == 1) {
+        messagegain *= 10
+        heatgain *= 5
+        doughgain *= 3
+        icinggain *= 2
+    }
+    if (upg523 == 1) {
+        icinggain *= 2
+    }
+    
+
     if (upg326 == 1) {
         ++upgs3
+        dough += doughgain
+        document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+        document.getElementById('dough').innerHTML = Math.floor(dough)
     }
 
     if (upg121 == 1) {
@@ -1787,6 +1864,438 @@ function incrementButton() {
                 document.getElementById('messagecount').innerHTML = Math.round(messages);
                 document.getElementById('clickmessage').innerHTML = Math.round(messagegain);
                 document.getElementById('upg326').style.backgroundColor = 890000
+
+                let showdough = document.getElementById("hidebeforeAC")
+                let hidden = showdough.getAttribute("hidden")
+                if (hidden) {
+                showdough.removeAttribute("hidden")
+                }
             }
+        }
+    }
+    function AllCandlesSC() {
+        messages = 61437468987702580000
+        heat = 9216434
+        friendship = 0.49
+        friendshiplost = 0.05
+        clicks = 25136
+        upg111 = 1
+        upg112 = 1
+        upg113 = 1
+        upg121 = 1
+        upg122 = 1
+        upg123 = 1
+        upg211 = 1
+        upg212 = 1
+        upg213 = 1
+        upg214 = 1
+        upg221 = 1
+        upg222 = 1
+        upg223 = 1
+        upg224 = 1
+        upg231 = 1
+        upg232 = 1
+        upg233 = 1
+        upg234 = 1
+        upg241 = 1
+        upg242 = 1
+        upg243 = 1
+        upg244 = 1
+        document.getElementById('candle1').style.display = "inline"
+        document.getElementById('upg111').style.display = "inline"
+        document.getElementById('upg112').style.display = "inline"
+        document.getElementById('upg113').style.display = "inline"
+        document.getElementById('upg121').style.display = "inline"
+        document.getElementById('upg122').style.display = "inline"
+        document.getElementById('upg123').style.display = "inline"
+        let showheat = document.getElementById("hidebeforeargument")
+            let hidden = showheat.getAttribute("hidden")
+            if (hidden) {
+                showheat.removeAttribute("hidden")
+            }
+        document.getElementById('upg211').style.backgroundColor = 996009
+        document.getElementById('upg211').style.display = "inline"
+        document.getElementById('upg212').style.backgroundColor = 996009
+        document.getElementById('upg212').style.display = "inline"
+        document.getElementById('upg213').style.backgroundColor = 996009
+        document.getElementById('upg213').style.display = "inline"
+        document.getElementById('upg214').style.backgroundColor = 996009
+        document.getElementById('upg214').style.display = "inline"
+        document.getElementById('upg221').style.backgroundColor = 996009
+        document.getElementById('upg221').style.display = "inline"
+        document.getElementById('upg222').style.backgroundColor = 996009
+        document.getElementById('upg222').style.display = "inline"
+        document.getElementById('upg223').style.backgroundColor = 996009
+        document.getElementById('upg223').style.display = "inline"
+        document.getElementById('upg224').style.backgroundColor = 996009
+        document.getElementById('upg224').style.display = "inline"
+        document.getElementById('upg231').style.backgroundColor = 996009
+        document.getElementById('upg231').style.display = "inline"
+        document.getElementById('upg232').style.backgroundColor = 996009
+        document.getElementById('upg232').style.display = "inline"
+        document.getElementById('upg233').style.backgroundColor = 996009
+        document.getElementById('upg233').style.display = "inline"
+        document.getElementById('upg234').style.backgroundColor = 996009
+        document.getElementById('upg234').style.display = "inline"
+        document.getElementById('upg241').style.backgroundColor = 996009
+        document.getElementById('upg241').style.display = "inline"
+        document.getElementById('upg242').style.backgroundColor = 996009
+        document.getElementById('upg242').style.display = "inline"
+        document.getElementById('upg243').style.backgroundColor = 996009
+        document.getElementById('upg243').style.display = "inline"
+        document.getElementById('upg244').style.backgroundColor = 996009
+        document.getElementById('upg244').style.display = "inline"
+        candle1 = 1
+        candle2 = 1
+        candle3 = 1
+        upg311 = 1
+        upg312 = 1
+        upg313 = 1
+        candle4 = 1
+        candle5 = 1
+        candle6 = 1
+        upg314 = 1
+        upg315 = 1
+        upg316 = 1
+        candle7 = 1
+        candle8 = 1
+        candle9 = 1
+        upg321 = 1
+        upg322 = 1
+        upg323 = 1
+        candle10 = 1
+        candle11 = 1
+        candle12 = 1
+        upg324 = 1
+        upg325 = 1
+        upg326 = 1
+        let showdough = document.getElementById("hidebeforeAC")
+        let hidden2 = showdough.getAttribute("hidden")
+            if (hidden2) {
+            showdough.removeAttribute("hidden")
+        }
+        document.getElementById('candle1').style.display = "inline"
+        document.getElementById('candle1').style.backgroundColor = 57029
+        document.getElementById('candle2').style.display = "inline"
+        document.getElementById('candle2').style.backgroundColor = 24397
+        document.getElementById('candle3').style.display = "inline"
+        document.getElementById('candle3').style.backgroundColor = 424242
+        document.getElementById('candle4').style.display = "inline"
+        document.getElementById('upg311').style.display = "inline"
+        document.getElementById('upg311').style.backgroundColor = 57029
+        document.getElementById('upg312').style.display = "inline"
+        document.getElementById('upg312').style.backgroundColor = 24397
+        document.getElementById('upg313').style.display = "inline"
+        document.getElementById('upg313').style.backgroundColor = 424242
+        document.getElementById('candle4').style.display = "inline"
+        document.getElementById('candle4').style.backgroundColor = 89938
+        document.getElementById('candle5').style.display = "inline"
+        document.getElementById('candle5').style.backgroundColor = 222222
+        document.getElementById('candle6').style.display = "inline"
+        document.getElementById('candle6').style.backgroundColor = 205396
+        document.getElementById('candle7').style.display = "inline"
+        document.getElementById('upg314').style.display = "inline"
+        document.getElementById('upg314').style.backgroundColor = 89938
+        document.getElementById('upg315').style.display = "inline"
+        document.getElementById('upg315').style.backgroundColor = 222222
+        document.getElementById('upg316').style.display = "inline"
+        document.getElementById('upg316').style.backgroundColor = 205396
+    }
+    function upgrade411() {
+        if (dough >= 100e3) {
+            if (upg411 == 0) {
+                dough -= 1e5
+                ++upg411
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg411').style.backgroundColor = 969433
+                document.getElementById('upg412').style.display = "inline"
+            }
+        }
+    }
+    function upgrade412() {
+        if (dough >= 250e3) {
+            if (upg412 == 0) {
+                dough -= 2.5e5
+                ++upg412
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg412').style.backgroundColor = 969433
+                document.getElementById('upg413').style.display = "inline"
+            }
+        }
+    }
+    function upgrade413() {
+        if (dough >= 500e3) {
+            if (upg413 == 0) {
+                dough -= 5e5
+                ++upg413
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg413').style.backgroundColor = 969433
+                document.getElementById('upg421').style.display = "inline"
+            }
+        }
+    }
+    function upgrade421() {
+        if (dough >= 1.2e6) {
+            if (upg421 == 0) {
+                dough -= 1.2e6
+                ++upg421
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg421').style.backgroundColor = 969433
+                document.getElementById('upg422').style.display = "inline"
+            }
+        }
+    }
+    function upgrade422() {
+        if (dough >= 2e6) {
+            if (upg422 == 0) {
+                dough -= 2e6
+                ++upg422
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg422').style.backgroundColor = 969433
+                document.getElementById('upg423').style.display = "inline"
+            }
+        }
+    }
+    function upgrade423() {
+        if (dough >= 3.5e6) {
+            if (upg423 == 0) {
+                dough -= 3.5e6
+                ++upg423
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg423').style.backgroundColor = 969433
+                document.getElementById('upg431').style.display = "inline"
+            }
+        }
+    }
+    function upgrade431() {
+        if (dough >= 15e6) {
+            if (upg431 == 0) {
+                dough -= 15e6
+                ++upg431
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg431').style.backgroundColor = 969433
+                document.getElementById('upg432').style.display = "inline"
+            }
+        }
+    }
+    function upgrade432() {
+        if (dough >= 50e6) {
+            if (upg432 == 0) {
+                dough -= 50e6
+                ++upg432
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg432').style.backgroundColor = 969433
+                document.getElementById('upg433').style.display = "inline"
+            }
+        }
+    }
+    function upgrade433() {
+        if (dough >= 0.1e9) {
+            if (upg433 == 0) {
+                dough -= 0.1e9
+                ++upg433
+                document.getElementById('doughgain').innerHTML = Math.floor(doughgain)
+                document.getElementById('dough').innerHTML = Math.floor(dough)
+                document.getElementById('upg433').style.backgroundColor = 969433
+                document.getElementById('upg431').style.display = "inline"
+                let showicing = document.getElementById("hidebeforeicing")
+                let hidden3 = showicing.getAttribute("hidden")
+                if (hidden3) {
+                showicing.removeAttribute("hidden")
+                }
+            }
+        }
+    }
+    function IcingSC() {
+        messages = 61437468987702580000
+        heat = 9216434
+        dough = 1
+        friendship = 0.49
+        friendshiplost = 0.05
+        clicks = 25136
+        upg111 = 1
+        upg112 = 1
+        upg113 = 1
+        upg121 = 1
+        upg122 = 1
+        upg123 = 1
+        upg211 = 1
+        upg212 = 1
+        upg213 = 1
+        upg214 = 1
+        upg221 = 1
+        upg222 = 1
+        upg223 = 1
+        upg224 = 1
+        upg231 = 1
+        upg232 = 1
+        upg233 = 1
+        upg234 = 1
+        upg241 = 1
+        upg242 = 1
+        upg243 = 1
+        upg244 = 1
+        document.getElementById('candle1').style.display = "inline"
+        document.getElementById('upg111').style.display = "inline"
+        document.getElementById('upg112').style.display = "inline"
+        document.getElementById('upg113').style.display = "inline"
+        document.getElementById('upg121').style.display = "inline"
+        document.getElementById('upg122').style.display = "inline"
+        document.getElementById('upg123').style.display = "inline"
+        let showheat = document.getElementById("hidebeforeargument")
+            let hidden = showheat.getAttribute("hidden")
+            if (hidden) {
+                showheat.removeAttribute("hidden")
+            }
+        document.getElementById('upg211').style.backgroundColor = 996009
+        document.getElementById('upg211').style.display = "inline"
+        document.getElementById('upg212').style.backgroundColor = 996009
+        document.getElementById('upg212').style.display = "inline"
+        document.getElementById('upg213').style.backgroundColor = 996009
+        document.getElementById('upg213').style.display = "inline"
+        document.getElementById('upg214').style.backgroundColor = 996009
+        document.getElementById('upg214').style.display = "inline"
+        document.getElementById('upg221').style.backgroundColor = 996009
+        document.getElementById('upg221').style.display = "inline"
+        document.getElementById('upg222').style.backgroundColor = 996009
+        document.getElementById('upg222').style.display = "inline"
+        document.getElementById('upg223').style.backgroundColor = 996009
+        document.getElementById('upg223').style.display = "inline"
+        document.getElementById('upg224').style.backgroundColor = 996009
+        document.getElementById('upg224').style.display = "inline"
+        document.getElementById('upg231').style.backgroundColor = 996009
+        document.getElementById('upg231').style.display = "inline"
+        document.getElementById('upg232').style.backgroundColor = 996009
+        document.getElementById('upg232').style.display = "inline"
+        document.getElementById('upg233').style.backgroundColor = 996009
+        document.getElementById('upg233').style.display = "inline"
+        document.getElementById('upg234').style.backgroundColor = 996009
+        document.getElementById('upg234').style.display = "inline"
+        document.getElementById('upg241').style.backgroundColor = 996009
+        document.getElementById('upg241').style.display = "inline"
+        document.getElementById('upg242').style.backgroundColor = 996009
+        document.getElementById('upg242').style.display = "inline"
+        document.getElementById('upg243').style.backgroundColor = 996009
+        document.getElementById('upg243').style.display = "inline"
+        document.getElementById('upg244').style.backgroundColor = 996009
+        document.getElementById('upg244').style.display = "inline"
+        candle1 = 1
+        candle2 = 1
+        candle3 = 1
+        upg311 = 1
+        upg312 = 1
+        upg313 = 1
+        candle4 = 1
+        candle5 = 1
+        candle6 = 1
+        upg314 = 1
+        upg315 = 1
+        upg316 = 1
+        candle7 = 1
+        candle8 = 1
+        candle9 = 1
+        upg321 = 1
+        upg322 = 1
+        upg323 = 1
+        candle10 = 1
+        candle11 = 1
+        candle12 = 1
+        upg324 = 1
+        upg325 = 1
+        upg326 = 1
+        upg411 = 1
+        upg412 = 1
+        upg413 = 1
+        upg421 = 1
+        upg422 = 1
+        upg423 = 1
+        upg431 = 1
+        upg432 = 1
+        upg433 = 1
+        let showdough = document.getElementById("hidebeforeAC")
+        let hidden2 = showdough.getAttribute("hidden")
+            if (hidden2) {
+            showdough.removeAttribute("hidden")
+        }
+        let showicing = document.getElementById("hidebeforeicing")
+                let hidden3 = showicing.getAttribute("hidden")
+                if (hidden3) {
+                showicing.removeAttribute("hidden")
+                }
+        document.getElementById('candle1').style.display = "inline"
+        document.getElementById('candle1').style.backgroundColor = 57029
+        document.getElementById('candle2').style.display = "inline"
+        document.getElementById('candle2').style.backgroundColor = 24397
+        document.getElementById('candle3').style.display = "inline"
+        document.getElementById('candle3').style.backgroundColor = 424242
+        document.getElementById('candle4').style.display = "inline"
+        document.getElementById('upg311').style.display = "inline"
+        document.getElementById('upg311').style.backgroundColor = 57029
+        document.getElementById('upg312').style.display = "inline"
+        document.getElementById('upg312').style.backgroundColor = 24397
+        document.getElementById('upg313').style.display = "inline"
+        document.getElementById('upg313').style.backgroundColor = 424242
+        document.getElementById('candle4').style.display = "inline"
+        document.getElementById('candle4').style.backgroundColor = 89938
+        document.getElementById('candle5').style.display = "inline"
+        document.getElementById('candle5').style.backgroundColor = 222222
+        document.getElementById('candle6').style.display = "inline"
+        document.getElementById('candle6').style.backgroundColor = 205396
+        document.getElementById('candle7').style.display = "inline"
+        document.getElementById('upg314').style.display = "inline"
+        document.getElementById('upg314').style.backgroundColor = 89938
+        document.getElementById('upg315').style.display = "inline"
+        document.getElementById('upg315').style.backgroundColor = 222222
+        document.getElementById('upg316').style.display = "inline"
+        document.getElementById('upg316').style.backgroundColor = 205396
+    }
+    function geticing() {
+        icing += icinggain
+        messages = 0
+        heat = 0
+        dough = 0
+    }
+    function upg511() {
+        if (icing >= 10 && upg511 == 0) {
+            icing -= 10
+            ++upg511
+        }
+    }
+    function upg512() {
+        if (icing >= 15 && upg512 == 0) {
+            icing -= 15
+            ++upg512
+        }
+    }
+    function upg513() {
+        if (icing >= 20 && upg513 == 0) {
+            icing -= 20
+            ++upg513
+        }
+    }
+    function upg521() {
+        if (icing >= 30 && upg511 == 30) {
+            icing -= 30
+            ++upg521
+        }
+    }
+    function upg522() {
+        if (icing >= 70 && upg522 == 0) {
+            icing -= 70
+            ++upg522
+        }
+    }
+    function upg523() {
+        if (icing >= 200 && upg523 == 0) {
+            icing -= 200
+            ++upg523
         }
     }
