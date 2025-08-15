@@ -1,1401 +1,252 @@
 <html>
-    <script src="js/stats.js"></script>
-    <link src="buttons.css"></link>
+    <script src="js/stats.js" type="module"></script>
+    <script src="js/tick.js" type="module"></script>
+    <script src="js/reset.js" type="module"></script>
+    <script src="js/save.js" type="module"></script>
+    <script src="js/notation.js" type="module"></script>
+    <script src="js/OmegaNum.js"></script>
+    <link rel="stylesheet" href="buttons.css"></link>
     <title>The Cake</title>
     <head>
-        <style>
-            #background {
-                background-color: black;
-                padding: 80% 50.61%;
-                margin-left: -8px;
-            }
-            #sendbutton {
-                background-color: #1f1f1f;
-                border: black;
-                color: #949494;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                font-family: Dubai Medium;
-                
-            }
-            #upg111 {
-                background: rgb(97,0,0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-            }
-            #upg112 {
-                background: rgb(97,0,0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-                display: none
-            }
-            #upg113 {
-                background: rgb(97, 0, 0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-                display: none
-            }
-            #upg121 {
-                background: rgb(97,0,0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-                display: none
-            }
-            #upg122 {
-                background: rgb(97,0,0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-                display: none
-            }
-            #upg123 {
-                background: rgb(97,0,0);
-                border: solid black 2px;
-                color: #949494;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                font-family: Dubai Medium;
-                display: none
-            }
-            #argument {
-                background: rgb(173, 104, 1);
-                background: linear-gradient(90deg, rgb(173, 104, 1) 0%, rgb(255, 238, 0) 100%);
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 16px;
-                font-family: Dubai Medium;
-            }
-            #upg211 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg212 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg213 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg214 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg221 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg222 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg223 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg224 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg231 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg232 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg233 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg234 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg241 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg242 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg243 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #upg244 {
-                background: #524635;
-                border: solid black 2px;
-                color: #440000;
-                text-align: center;
-                text-decoration: none;
-                display: none;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #candle1 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg311 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle2 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-            }
-            #upg312 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle3 {
-                display:none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-            }
-            #upg313 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle4 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-            }
-            #upg314 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle5 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-            }
-            #upg315 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle6 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 10px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                font-size: 12px;
-            }
-            #upg316 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle7 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg321 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle8 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg322 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle9 {
-                display:none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg323 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle10 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg324 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle11 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 9px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg325 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #candle12 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 10px;
-                text-align: center;
-                font-family: Dubai Medium;
-                padding-top: 35px;
-                padding-bottom: 35px;
-                padding-left: -2px;
-                padding-right: -2px;
-                font-size: 11px;
-            }
-            #upg326 {
-                display: none;
-                background: #696969;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg411 {
-                display: inline;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg412 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg413 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg421 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg422 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg423 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg431 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg432 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #upg433 {
-                display: none;
-                background: #727142;
-                color: #ffffff;
-                border: none;
-                font-size: 12px;
-                text-align: center;
-                font-family: Dubai Medium;
-            }
-            #geticing {
-                background: #993333;
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #ShortcutHeatEnd {
-                background: rgb(173, 104, 1);
-                background: linear-gradient(90deg, rgb(173, 104, 1) 0%, rgb(255, 238, 0) 100%);
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #Shortcut3Candles {
-                background: #057029;
-                background: linear-gradient(90deg, #057029 0%, #024397 50%, #424242 100%);
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #Shortcut6Candles {
-                background: #089938;
-                background: linear-gradient(90deg, #089938 0%, #222222 50%, #205396 100%);
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #Shortcut12Candles {
-                background: #727142;
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            #ShortcutIcing {
-                background: #792222;
-                color: #000000;
-                text-align: center;
-                text-decoration: none;
-                display: inline;
-                font-size: 10px;
-                font-family: Dubai Medium;
-            }
-            
-        </style>
-        <element id="background"></element>
     </head>
-    <body>
-        <div style="text-align:center;">
-            <font face="Dubai Medium" size = 4 color = white>
-                <message1>You have </message1>
-            </font>
-            <font face="Dubai Medium" size = 6 color = white>
-                <span id = messagecount>0</span>
-            </font>
-            <font face="Dubai Medium" size = 4 color = white>
-                <message2> messages</message2>
-            </font>
-            <br>
-            <font face="Dubai Medium" size = 2 color = white>
-                <span id = clickmessage>1</span>
-                <messageclick> messages per click</messageclick>
-            </font>
-        </div>
-        <div style="text-align:center;">
-                <button id="sendbutton" onclick="incrementButton()">
-                    Send a message.
-                </button>
-        </div>
-        <div style="text-align:center;">
-        <button id="upg111" onclick="upgrade111()">
-            [1-1-1]
-            <br>
-            Get better at sending messages.
-            <br>
-            +2 messages per click.
-            <br>
-            Cost: 20 messages.
-        </button>
-        <button id="upg112" onclick="upgrade112()">
-            [1-1-2]
-            <br>
-            Gain more messages based on your messages.
-            <br>
-            log10(messages)+1 message multiplier. Rounded to the hundredth.
-            <br>
-            Cost: 150 messages.
-        </button>
-        <button id="upg113" onclick="upgrade113()">
-            [1-1-3]
-            <br>
-            Gain more messages based on your clicks.
-            <br>
-            (log10(clicks)*2.5)+1 message multiplier. Rounded to the hundredth.
-            <br>
-            Cost: 1000 messages.
-        </button>
-        <br>
-        <button id="upg121" onclick="upgrade121()">
-            [1-2-1]
-            <br>
-            Your upgrades multiply message gain by 1.2 each time!
-            <br>
-            x1.2 messages per message upgrade.
-            <br>
-            Cost: 3000 messages.
-        </button>
-        <button id="upg122" onclick="upgrade122()">
-            [1-2-2]
-            <br>
-            Your upgrades add to message gain base!
-            <br>
-            +3 base message gain per message upgrade.
-            <br>
-            Cost: 10K messages.
-        </button>
-        <button id="upg123" onclick="upgrade123()">
-            [1-2-3]
-            <br>
-            A nice little x2 multiplier to help!
-            <br>
-            Yes, 1-2-1's effect also counts, meaning this is a total of x2.4 messages.
-            <br>
-            Cost: 50K messages.
-        </button>
-        </div>
-        <div style="text-align:center;">
-            <button id="argument" onclick ="argument()">
-                Cause an argument.
-                <br>
-                This will reset your messages, and all message upgrades.
-                <br>
-                This will not reset your total clicks however, so 1-1-3 will be stronger than last time.
-                <br>
-                Causing arguments will earn you Heat based on messages and friendship.
-                <br>
-                You lose friendship every time you cause an argument, but gain it back slowly as you send messages.
-                <br>
-                You need 100K messages to cause an argument.
-            </button>
-        </div>
-        <div style="text-align:center;" id="hidebeforeargument" hidden=hidden>
-            <font face="Dubai Medium" size = 2 color = orange>
-                <heatgain>You will gain</heatgain>
-            </font>
-            <font face="Dubai Medium" size = 4 color = yellow>
-                <span id="heatgain"> 0 </span>
-            </font>
-            <font face="Dubai Medium" size = 2 color = orange>
-                <heatgain>heat</heatgain>
-                <br>
-            </font>
-            <font face="Dubai Medium" size = 2 color = orange>
-                <heat>You have </heat>
-            </font>
-            <font face="Dubai Medium" size = 4 color = yellow>
-                <span id= heat>0</span>
-            </font>
-            <font face="Dubai Medium" size = 2 color = orange>
-                <heat> heat <br></heat>
-            </font>
-            <font face="Dubai Medium" size = 2 color = lime>
-                <friendship>You have </friendship>
-                <span id = friendship>1</span>
-                <friendship> friendship, and you lose </friendship>
-                <span id = friendlost>0.5</span>
-                <friendship> friendship per argument.</friendship>
-            </font>
-        </div>
-        <div>
-            <div style="text-align:center;">
-            <button id="upg211" onclick="upgrade211()">
-                [2-1-1]
-                <br>
-                Arguments always cause there to be a lot of messages.
-                <br>
-                Heat boosts message gain (^0.9)
-                <br>
-                Cost: 1 heat.
-            </button>
-            <button id="upg212" onclick="upgrade212()">
-                [2-1-2]
-                <br>
-                Good friends send messages to each other more often.
-                <br>
-                Boost message gain based on friendship ((FS+1)^1.2)
-                <br>
-                Cost: 3 heat.
-            </button>
-            <button id="upg213" onclick="upgrade213()">
-                [2-1-3]
-                <br>
-                1-1-3 is too weak. Let's make it stronger!
-                <br>
-                1-1-3's effect applies again.
-                <br>
-                Cost: 5 heat.
-            </button>
-            <button id="upg214" onclick="upgrade214()">
-                [2-1-4]
-                <br>
-                After a couple arguments, everyone has gotten used to it.
-                <br>
-                You now only lose 0.2 friendship per argument caused.
-                <br>
-                Cost: 7 heat.
-            </button>
-            <br>
-            <button id="upg221" onclick="upgrade221()">
-                [2-2-1]
-                <br>
-                Wait, you need more heat don't you? Here's some bonus heat!
-                <br>
-                x1.5 heat gain.
-                <br>
-                Cost: 10 heat.
-            </button>
-            <button id="upg222" onclick="upgrade222()">
-                [2-2-2]
-                <br>
-                Each heat upgrade boosts heat gain by 1.1x
-                <br>
-                I don't know what else to say that's pretty explanatory
-                <br>
-                Cost: 15 heat.
-            </button>
-            <button id="upg223" onclick="upgrade223()">
-                [2-2-3]
-                <br>
-                1-1-3 boosts heat gain.
-                <br>
-                Except it's a reduced effect! Found a use for the 3rd line.
-                <br>
-                Cost: 25 heat.
-            </button>
-            <button id="upg224" onclick="upgrade224()">
-                [2-2-4]
-                <br>
-                The scale of arguments is getting smaller and smaller as the GC's are getting better people
-                <br>
-                You now only lose 0.1 friendship per argument caused.
-                <br>
-                Cost: 40 heat.
-            </button>
-            <br>
-            <button id="upg231" onclick="upgrade231()">
-                [2-3-1]
-                <br>
-                Quadruple message gain.
-                <br>
-                This upgrade was made on October 18th 2022, at 21:07 GMT+2.
-                <br>
-                Cost: 150 heat.
-            </button>
-            <button id="upg232" onclick="upgrade232()">
-                [2-3-2]
-                <br>
-                Friendship needs more buffs.
-                <br>
-                Boost heat gain based on friendship. (you don't need a formula.)
-                <br>
-                Cost: 200 heat.
-            </button>
-            <button id="upg233" onclick="upgrade233()">
-                [2-3-3]
-                <br>
-                Any 2-X-3 upgrade must be related to 1-1-3.
-                <br>
-                Arguments add 250 clicks to 1-1-3's effect (and any upgrades related to it)
-                <br>
-                Cost: 350 heat.
-            </button>
-            <button id="upg234" onclick="upgrade234()">
-                [2-3-4]
-                <br>
-                Arguments became an usual thing now.
-                <br>
-                You now only lose 0.05 friendship per argument caused.
-                <br>
-                Cost: 420(lolers) heat.
-            </button>
-            <br>
-            <button id="upg241" onclick="upgrade241()">
-                [2-4-1]
-                <br>
-                x5 messages and x1.75 heat.
-                <br>
-                This is the final row before the next feature! Don't give up!
-                <br>
-                Cost: 700 heat.
-            </button>
-            <button id="upg242" onclick="upgrade242()">
-                [2-4-2]
-                <br>
-                Friendship boosts heat and message gain.
-                <br>
-                4th row upgrades just take the previous row's effects and tweaks them.
-                <br>
-                Cost: 1500 heat.
-            </button>
-            <button id="upg243" onclick="upgrade243()">
-                [2-4-3]
-                <br>
-                1-1-3 is life.
-                <br>
-                Apply it 3 more times to messages, and 1 more time to heat.
-                <br>
-                Cost: 3.5K heat.
-            </button>
-            <button id="upg244" onclick="upgrade244()">
-                [2-4-4]
-                <br>
-                Unlock Candles and x1.5 heat gain.
-                <br>
-                Candles cost messages and heat, but triple message gain and double heat gain.
-                <br>
-                They also unlock a new upgrade each, and never reset unless specified.
-                <br>
-                Cost: 10K heat.
-            </button>
-            </div>
-            <div style="text-align:center">
-                <button id="candle1" onclick="candle1buy()">
-                    10/24/21 - 11/23/21
-                    <br>
-                    The Candle of Evolution
-                    <br>
-                    (Cell to Singularity)
-                    <br>
-                    x3 messages and x2 heat, 
-                    <br>
-                    for a total of x3 and x2 respectively!
-                    <br>
-                    1Qd messages and 100K heat
-                </button>
-                <button id="candle2" onclick="candle2buy()">
-                    11/24/21 - 12/23/21
-                    <br>
-                    The Candle of Simulation <br>(Algodoo)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x9 and x4 respectively!
-                    <br>
-                    25Qd messages and 200K heat
-                </button>
-                <button id="candle3" onclick="candle3buy()">
-                    12/24/21 - 01/23/22
-                    <br>
-                    The Candle of Creation <br>(Minecraft)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x27 and x8 respectively!
-                    <br>
-                    100Qd messages and 500K heat
-                </button>
-                <button id="candle4" onclick="candle4buy()">
-                    01/24/22 - 02/23/22
-                    <br>
-                    The Candle of Monkeys and Balloons <br>(Bloons TD 6)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x81 and x16 respectively!
-                    <br>
-                    1Qi messages and 1.5M heat
-                </button>
-                <button id="candle5" onclick="candle5buy()">
-                    02/24/22 - 03/23/22
-                    <br>
-                    The Candle of Arguments <br>(THE GREAT COLLAPSE)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x243 and x32 respectively!
-                    <br>
-                    3Qi messages and 4M heat
-                </button>
-                <button id="candle6" onclick="candle6buy()">
-                    03/24/22 - 04/23/22
-                    <br>
-                    The Candle of Anniversaries <br>(6 month anniversary)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x729 and x64 respectively!
-                    <br>
-                    7Qi messages and 25M heat
-                </button>
-                <br>
-                <button id="upg311" onclick="upgrade311()">
-                    [3-1-1]
-                    <br>
-                    Evolve your message sending.
-                    <br>
-                    A basic x2 message gain.
-                    <br>
-                    1T messages.
-                </button>
-                <button id="upg312" onclick="upgrade312()">
-                    [3-1-2]
-                    <br>
-                    Simulate arguments.
-                    <br>
-                    Wow, is that 1.75x heat?
-                    <br>
-                    10T messages.
-                </button>
-                <button id="upg313" onclick="upgrade313()">
-                    [3-1-3]
-                    <br>
-                    Find a way to create messages and heat.
-                    <br>
-                    A candle's worth of boosts!
-                    <br>
-                    25T messages.
-                </button>
-                <button id="upg314" onclick="upgrade314()">
-                    [3-1-4]
-                    <br>
-                    Popping Bloons since 2021.
-                    <br>
-                    Pop your way to a 1.5x heat.
-                    <br>
-                    500T messages.
-                </button>
-                <button id="upg315" onclick="upgrade315()">
-                    [3-1-5]
-                    <br>
-                    An argument caused a collapse.
-                    <br>
-                    Arguments give you x3 heat.
-                    <br>
-                    1Qd messages.
-                </button>
-                <button id="upg316" onclick="upgrade316()">
-                    [3-1-6]
-                    <br>
-                    6 candles so far! Halfway there!
-                    <br>
-                    Happy x5 messages everyone!
-                    <br>
-                    4Qd messages.
-                </button>
-                <br>
-                <button id="candle7" onclick="candle7buy()">
-                    04/24/21 - 05/23/21
-                    <br>
-                    The Candle of Space
-                    <br>
-                    (Dredark, cool game i recommend)
-                    <br>
-                    x3 messages and x2 heat, 
-                    <br>
-                    for a total of x2187 and x128 respectively!
-                    <br>
-                    1e+21 messages and 60M heat
-                </button>
-                <button id="candle8" onclick="candle8buy()">
-                    05/24/21 - 06/23/21
-                    <br>
-                    The Candle of Fusion <br>(ROBLOX Merge)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x6561 and x256 respectively!
-                    <br>
-                    9e+21 messages and 150M heat
-                </button>
-                <button id="candle9" onclick="candle9buy()">
-                    06/24/21 - 07/23/22
-                    <br>
-                    The Candle of Factories <br>(MC Modpack Nomifactory)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x19.6K and x512 respectively!
-                    <br>
-                    2e+22 messages and 5B heat
-                </button>
-                <button id="candle10" onclick="candle10buy()">
-                    07/24/22 - 08/23/22
-                    <br>
-                    The Candle of Emptiness <br>(theoof goes offline for 2 weeks)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x59K and x1024 respectively!
-                    <br>
-                    2e+23 messages and 100B heat
-                </button>
-                <button id="candle11" onclick="candle11buy()">
-                    08/24/22 - 09/23/22
-                    <br>
-                    The Candle of Vegetation <br>(ROBLOX Grass Cutting Incremental)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x177K and x2048 respectively!
-                    <br>
-                    1e+24 messages and 250B heat
-                </button>
-                <button id="candle12" onclick="candle12buy()">
-                    09/24/22 - 10/23/22
-                    <br>
-                    The Second Candle of Anniversaries <br>(1 year anniversary)
-                    <br>
-                    x3 messages and x2 heat, <br>for a total of x531K and x4096 respectively!
-                    <br>
-                    3e+24 messages and 1T heat
-                </button>
-                <br>
-                <button id="upg321" onclick="upgrade321()">
-                    [3-2-1]
-                    <br>
-                    Messages are going to space! Like seriously what's a e+ ???
-                    <br>
-                    Spoiler alert: it's exponents (anyways heres a free x4 message gain!)
-                    <br>
-                    100K heat.(WOW ITS NO LONGER MESSAGES!)
-                </button>
-                <button id="upg322" onclick="upgrade322()">
-                    [3-2-2]
-                    <br>
-                    Merge messages together to get more heat. How does that even work?
-                    <br>
-                    x2 heat gain from Merge:not tm:
-                    <br>
-                    250k heat.
-                </button>
-                <button id="upg323" onclick="upgrade323()">
-                    [3-2-3]
-                    <br>
-                    Create a factory. We don't need boosts. We need speed.
-                    <br>
-                    You also cannot cause arguments anymore but you gain heat every time you click. 
-                    <br>
-                    You are stuck at 1-(friendship lost) friendship.
-                    <br>
-                    1.2M heat.
-                </button>
-                <button id="upg324" onclick="upgrade324()">
-                    [3-2-4]
-                    <br>
-                    Now we don't know when we reach message milestone...
-                    <br>
-                    SO LETS SEND THREE TIMES AS MANY MESSAGES!!!
-                    <br>
-                    5M heat.
-                </button>
-                <button id="upg325" onclick="upgrade325()">
-                    [3-2-5]
-                    <br>
-                    Grass. Prestige. Crystallize. Gra- STOP SPOILING HENRY!!!!!!
-                    <br>
-                    x2 messages because im mad at henery rodmine for spoiling gci :sob::sob::sob:
-                    <br>
-                    12M heat.
-                </button>
-                <button id="upg326" onclick="upgrade326()">
-                    [3-2-6]
-                    <br>
-                    Finally. You've acquired all candles. And they don't reset unless specified.
-                    <br>
-                    Unlock Dough, a currency gained by clicking and based on Messages and Heat.
-                    <br>
-                    25M heat.
-                </button>
-            </div>
-                <div style="text-align:center;" id="hidebeforeAC" hidden=hidden>
-                    <font face="Dubai Medium" size = 2 color = 444400>
-                        <doughgain>You gain</doughgain>
-                    </font>
-                    <font face="Dubai Medium" size = 4 color = 888800>
-                        <span id="doughgain"> 0 </span>
-                    </font>
-                    <font face="Dubai Medium" size = 2 color = 444400>
-                        <doughgain>dough per click.</doughgain>
-                        <br>
-                    </font>
-                    <font face="Dubai Medium" size = 2 color = 444400>
-                        <dough>You have </dough>
-                    </font>
-                    <font face="Dubai Medium" size = 4 color = 888800>
-                        <span id= dough>0</span>
-                </font>
-                <font face="Dubai Medium" size = 2 color = 444400>
-                    <dough> dough.<br></dough>
-                </font>
-                <button id="upg411" onclick="upgrade411()">
-                    [4-1-1]
-                    <br>
-                    Im running out of time.
-                    <br>
-                    x2 message gain.
-                    <br>
-                    100k dough.
-                </button>
-                <button id="upg412" onclick="upgrade412()">
-                    [4-1-2]
-                    <br>
-                    Less than an hour left
-                    <br>
-                    x2 heat gain.
-                    <br>
-                    250k dough.
-                </button>
-                <button id="upg413" onclick="upgrade413()">
-                    [4-1-3]
-                    <br>
-                    Dough and icing left to make
-                    <br>
-                    x2 dough gain.
-                    <br>
-                    500k dough.
-                </button>
-                <button id="upg421" onclick="upgrade421()">
-                    [4-2-1]
-                    <br>
-                    Just 9 upgrades for dough...
-                    <br>
-                    More messages based on heat
-                    <br>
-                    1.2M dough.
-                </button>
-                <button id="upg422" onclick="upgrade422()">
-                    [4-2-2]
-                    <br>
-                    ...and 9 upgrades for icing.
-                    <br>
-                    More heat based on dough
-                    <br>
-                    2M dough.
-                </button>
-                <button id="upg423" onclick="upgrade423()">
-                    [4-2-3]
-                    <br>
-                    Already done typing 6 of the 18
-                    <br>
-                    More dough based on messages
-                    <br>
-                    3.5M dough.
-                </button>
-                <button id="upg431" onclick="upgrade431()">
-                    [4-3-1]
-                    <br>
-                    Better descriptions and UI
-                    <br>
-                    1-1-3 applies again
-                    <br>
-                    15M dough.
-                </button>
-                <button id="upg432" onclick="upgrade432()">
-                    [4-3-2]
-                    <br>
-                    In v1.1
-                    <br>
-                    1-1-3 applies to messages and heat again
-                    <br>
-                    50M dough.
-                </button>
-                <button id="upg433" onclick="upgrade433()">
-                    [4-3-3]
-                    <br>
-                    Coming November 24th
-                    <br>
-                    1-1-3 applies to messages, heat and dough. Also unlock Icing.
-                    <br>
-                    100M dough.
-                </button>
-                <button id="geticing" onclick="geticing()">
-                    Get icing based on dough
-                    <br>
-                    please help me im so stressed idk if i'll finish this in time aaaaa
-                </button>
-            </div>
-            <div style="text-align:center;" id="hidebeforeicing" hidden=hidden>
-                <font face="Dubai Medium" size = 2 color = 792222>
-                    <icinggain>You will gain</icinggain>
-                </font>
-                <font face="Dubai Medium" size = 4 color = 993333>
-                    <span id="icinggain"> 0 </span>
-                </font>
-                <font face="Dubai Medium" size = 2 color = 792222>
-                    <icinggain>icing.</icinggain>
-                    <br>
-                </font>
-                <font face="Dubai Medium" size = 2 color = 792222>
-                    <icing>You have </icing>
-                </font>
-                <font face="Dubai Medium" size = 4 color = 993333>
-                    <span id= dough>0</span>
-            </font>
-            <font face="Dubai Medium" size = 2 color = 792222>
-                <icing> icing.<br></icing>
-            </font>
-            <button id="upg511" onclick="upgrade511()">
-                [5-1-1]
-                <br>
-                *listening to Here I Come because it's just too good*
-                <br>
-                x10 messages.
-                <br>
-                10 icing.
-            </button>
-            <button id="upg512" onclick="upgrade512()">
-                [5-1-2]
-                <br>
-                oh hey sorry uh yes 12 minutes left WAIT AYO THATS NOT A LOT
-                <br>
-                x5 heat.
-                <br>
-                15 icing.
-            </button>
-            <button id="upg513" onclick="upgrade513()">
-                [5-1-3]
-                <br>
-                HURRY UP NATHAN HURRY UUUUUUUUUUUUP!!!!
-                <br>
-                x3 dough.
-                <br>
-                20 icing.
-            </button>
-            <button id="upg521" onclick="upgrade521()">
-                [5-2-1]
-                <br>
-                FINISH THE GAME PLEASE
-                <br>
-                x2 icing
-                <br>
-                30 icing.
-            </button>
-            <button id="upg522" onclick="upgrade522()">
-                [5-2-2]
-                <br>
-                COME ON ALMOST THERE
-                <br>
-                5-1-1 5-1-2 5-1-3 and 5-2-1 apply again
-                <br>
-                70 icing.
-            </button>
-            <button id="upg523" onclick="upgrade523()">
-                [5-2-3]
-                <br>
-                [[[FINAL UPGRADE]]]
-                <br>
-                UNLOCK THE FOURTEEN TRIALS OF THE MEMBERS AND DOUBLE ICING AGAIN.
-                <br>
-                200 icing.
-            </button>
-        </div>
-        </div>
+    <body style="background-color:rgb(0, 0, 0);">
         
+        <div>
+            <span id="candlecountline" class="candlecount">You have <span id="candlecount">0</span> candles</span>
+            <span id ="heatcountline" class="heatcount">You have <span id="heatcount">0</span> heat</span></span>
+            <span class="messages">You have <span id="messagecount">0</span> messages<br>
+            You get <span id="passive">0</span> messages per second
+            <br>
+            <button class="send_button" onclick="incrementButton()">
+                Send <span id="active">a message</span>
+            </button></span>
+        </div>
+        <div class="tabs">
+            <button id="messagetab" class="messagetab" onclick="tab('main')">Main</button>
+            <button id="argumenttab" class="argumenttab" onclick="tab('argument')">Arguments</button>
+            <button id="candlestab" class="candlestab" onclick="tab('candles')">Candles</button>
+            <button id="statstab" class="statstab" onclick="tab('stats')">Stats/Options</button>
+        </div>
+        <div id="main" class="messages">
+            <button class="messageupgs" onclick="upg(0,'messages','messages')">
+                <span class="bold">Message Upgrade 1</span><br>
+                Send messages faster, doubling message gain!<br>
+                <br>
+                20 messages<br>
+                <span id="M1" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM2" class="messageupgs" onclick="upg(1,'messages','messages')">
+                <span class="bold">Message Upgrade 2</span><br>
+                Invite some of your friends to help. (More messages based on messages)<br>
+                75 messages<br>
+                <span id="M2" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM3" class="messageupgs" onclick="upg(2,'messages','messages')">
+                <span class="bold">Message Upgrade 3</span><br>
+                Start sending tons of screenshots. +75% messages.<br>
+                <br>
+                300 messages<br>
+                <span id="M3" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM4" class="messageupgs" onclick="upg(3,'messages','messages')">
+                <span class="bold">Message Upgrade 4</span><br>
+                Start some small arguments to further increase the rate at which messages are sent. (x2)<br>
+                1,000 messages<br>
+                <span id="M4" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <br>
+            <button id="bM5" class="messageupgs" onclick="upg(4,'messages','messages')">
+                <span class="bold">Message Upgrade 5</span><br>
+                Start gamenights in your GC (x2.5 messages).
+                This will also make every Message Upgrade
+                give you 0.5 clicks per second.<br>
+                1,500 messages<br>
+                <span id="M5" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM6" class="messageupgs" onclick="upg(5,'messages','messages')">
+                <span class="bold">Message Upgrade 6</span><br>
+                Sending messages will make it more likely for other messages to be sent. Increased message gain based on total clicks.<br>
+                4,500 messages<br>
+                <span id="M6" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM7" class="messageupgs" onclick="upg(6,'messages','messages')">
+                <span class="bold">Message Upgrade 7</span><br>
+                Invite people that are online when you aren't, allowing for a constant stream of messages. Triple message gain.<br>
+                25,000 messages<br>
+                <span id="M7" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM8" class="messageupgs" onclick="upg(7,'messages','messages')">
+                <span class="bold">Message Upgrade 8</span><br>
+                Pineapple on pizza? Unlock the Argument layer, which will reset all previous message content for Heat.<br>
+                100,000 messages<br>
+                <span id="M8" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <br>
+            <button id="bM9" class="messageupgs" onclick="upg(7,'messages','messages')">
+                <span class="bold">Message Upgrade 9</span><br>
+                Each message upgrade gives x1.05 message gain.<br>
+                1e16 messages<br>
+                <span id="M9" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bM10" class="messageupgs" onclick="upg(7,'messages','messages')">
+                <span class="bold">Message Upgrade 10</span><br>
+                Placeholders be like<br>
+                At least 3 messages<br>
+                <span id="M10" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <br>
+            <button id="bMR1" class="messageupgs" onclick="buyable(0,'messages','messages')">
+                <span class="bold">Repeatable Message Upgrade 1</span><br>
+                Such important message milestones must be celebrated... by sending more messages! x1.5 Messages per level<br>
+                <span id="RMU1cost">10,000,000 messages</span><br>
+                <span id="RMU1">Level 0</span>
+            </button>
+            <button id="bMR2" class="messageupgs" onclick="buyable(1,'messages','messages')">
+                <span class="bold">Repeatable Message Upgrade 2</span><br>
+                Everyone is getting along really well. Increase Friendship cap by 5% per level.<br><br>
+                <span id="RMU2cost">10,000,000 messages</span><br>
+                <span id="RMU2">Level 0</span>
+            </button>
+        </div>
+        <div id="argument" class="arguments">
+            <button class="argreset" onclick="argumentreset()">
+                <span class="bold">[ARGUMENT RESET]</span><br>
+                You will gain <span id="heatgain">0</span> heat.<br>
+                (All previous content will get reset, apart from MU8)<br>
+                You need 250k Messages to cause an Argument.
+            </button>
+            <div class="friendship">
+                You have <span id="friend">100</span>% friendship, which directly affects Heat gain.<br>
+                You lose <span id="friendlost">50</span>% per argument, gain 0.1% per click and 0.02% per auto-click.
+            </div>
+            <button id="bH1" class="heatupgs" onclick="upg(0,'argument','heat')">
+                <span class="bold">Heat Upgrade 1</span><br>
+                After the collapse of the first group chat, you start<br>
+                talking about the argument. x2 Messages<br>
+                1 Heat<br>
+                <span id="H1" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH2" class="heatupgs" onclick="upg(1,'argument','heat')">
+                <span class="bold">Heat Upgrade 2</span><br>
+                If there's tensions between people, they're likely to
+                talk with eachother. Increase messages based on heat.<br>
+                2 Heat<br>
+                <span id="H2" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH3" class="heatupgs" onclick="upg(2,'argument','heat')">
+                <span class="bold">Heat Upgrade 3</span><br>
+                Good friends talk more often when together.
+                Friendship increases message gain. You will lose message gain under 50%!<br>
+                3 Heat<br>
+                <span id="H3" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH4" class="heatupgs" onclick="upg(3,'argument','heat')">
+                <span class="bold">Heat Upgrade 4</span><br>
+                Arguments don't do much to your friendship anymore.
+                Friendship goes down less per argument and it's cap is now 125%<br>
+                5 Heat<br>
+                <span id="H4" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <br>
+            <button id="bH5" class="heatupgs" onclick="upg(4,'argument','heat')">
+                <span class="bold">Heat Upgrade 5</span><br>
+                Why not talk about previous arguments?
+                Gain more messages based on argument count.<br><br>
+                12 Heat<br>
+                <span id="H5" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH6" class="heatupgs" onclick="upg(5,'argument','heat')">
+                <span class="bold">Heat Upgrade 6</span><br>
+                By now, we know how to make new Group Chats...
+                Message Upgrades no longer resets on Argument.<br><br>
+                20 Heat<br>
+                <span id="H6" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH7" class="heatupgs" onclick="upg(6,'argument','heat')">
+                <span class="bold">Heat Upgrade 7</span><br>
+                Arguments become such a common thing now!
+                Heat Upgrades boost Heat and Message gain by x1.2 each<br><br>
+                50 Heat<br>
+                <span id="H7" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH8" class="heatupgs" onclick="upg(7,'argument','heat')">
+                <span class="bold">Heat Upgrade 8</span><br>
+                These arguments have become part of your friendship.
+                Friendship cap is 160% and goes down even less.<br><br>
+                1,000 Heat<br>
+                <span id="H8" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <br>
+            <button id="bH9" class="heatupgs" onclick="upg(8,'argument','heat')">
+                <span class="bold">Heat Upgrade 9</span><br>
+                Unlock a repeatable upgrade in the Main Tab.
+                It doesn't reset on Arguments.<br><br>
+                1,750 Heat<br>
+                <span id="H9" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH10" class="heatupgs" onclick="upg(9,'argument','heat')">
+                <span class="bold">Heat Upgrade 10</span><br>
+                There's so many things to talk about nowadays... Quintuple Message gain.<br><br>
+                3,500 Heat<br>
+                <span id="H10" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH11" class="heatupgs" onclick="upg(10,'argument','heat')">
+                <span class="bold">Heat Upgrade 11</span><br>
+                Add a second repeatable upgrade in the main tab.<br><br><br>
+                10,000 Heat<br>
+                <span id="H11" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bH12" class="heatupgs" onclick="upg(11,'argument','heat')">
+                <span class="bold">Heat Upgrade 12</span><br>
+                So many group chats have fallen into irrelevancy... But after so long, a GC stays alive for a full month. Unlock Candles.<br>
+                30,000 Heat<br>
+                <span id="H12" class="notbought">[NOT BOUGHT]</span>
+            </button>
+        </div>
+        <div id="candles" class="candles">
+            <button class="candlereset" onclick="candlereset()">
+                <span class="bold">[CANDLES RESET]</span><br>
+                You will gain <span id="candlegain">0</span> candles.<br>
+                Everything up to this point except MU8 and HU12 will be reset.<br>
+                You need 50k heat to create candles.
+            </button>
+            <center><p id="CM1" class="candlemilestone">
+                <span class="bold">Candle Milestone 1</span><br>
+                1 Total Candle<br>
+                Every CM will give 2x messages and x1.3 heat. Also unlock 3 candle upgrades.
+            </p></center>
+            <center><p id="CM2" class="candlemilestone">
+                <span class="bold">Candle Milestone 2</span><br>
+                3 Total Candles<br>
+                You can gain more than 1 Candle per reset, however their gain is very low. Also unlock a few Message and Heat upgrades, aswell as a Candle buyable.
+            </p></center>
+            <button id="bC1" class="candleupgs" onclick="upg(0,'candles','candles')">
+                <span class="bold">Candle Upgrade 1</span><br>
+                Reward your GC with x5 messages, keeping MU5 on resets,<br>
+                doubled auto-click speed, and lowering RMU cost scalings.<br>
+                1 Candle<br>
+                <span id="C1" class="notbought">[NOT BOUGHT]</span>
+            </button>
+            <button id="bC2" class="candleupgs" onclick="upg(1,'candles','candles')">
+                <span class="bold">Candle Upgrade 2</span><br>
+                Reward your GC with x2.5 heat, keeping HU7 on resets,<br>
+                halved friendship loss, and double friendship gain/cap.<br>
+                1 Candle<br>
+                <span id="C2" class="notbought">[NOT BOUGHT]</span>
+            </button><br>
+            <button id="bCR1" class="candleupgs" onclick="buyable(0,'candles','candles')">
+                <span class="bold">Repeatable Candle Upgrade 1</span><br>
+                +40% Messages and +20% Heat compounding per level!<br>
+                <span id="RCU1cost">1 candles</span><br>
+                <span id="RCU1">Level 0</span>
+            </button>
+        </div>
+        <div id="stats" class="stats">
+            You have clicked <span id="clickcount">0</span> times on Send Message. (including auto-clicks)<br>
+            <span id="argumentcountline"><span id="argumentcount">0</span> Group Chats have collapsed due to arguments.</span><br>
+            <span id="candleformedline">You have formed Candles <span id="candleformed">0</span> times.</span>
+        </div>
     </body>
     <legs>
-        <div style="text-align:center">
-            <button id="ShortcutHeatEnd" onclick="AllHeatUpgradesSC()">
-            SHORTCUT!
-            <br>
-            Only use to get back to a part of the game you've already gotten to.
-            <br>
-            This will be removed once I add autosaving feature.
-            <br>
-            Shortcut 1: All heat upgrades
-            </button>
-            <button id="Shortcut3Candles" onclick="ThreeCandlesSC()">
-                SHORTCUT!
-                <br>
-                Only use to get back to a part of the game you've already gotten to.
-                <br>
-                This will be removed once I add autosaving feature.
-                <br>
-                Shortcut 2: 3/12 candles.
-            </button>
-            <button id="Shortcut6Candles" onclick="SixCandlesSC()">
-                SHORTCUT!
-                <br>
-                Only use to get back to a part of the game you've already gotten to.
-                <br>
-                This will be removed once I add autosaving feature.
-                <br>
-                Shortcut 3: 6/12 candles.
-            </button>
-            <button id="Shortcut12Candles" onclick="AllCandlesSC()">
-                    SHORTCUT!
-                    <br>
-                    Only use to get back to a part of the game you've already gotten to.
-                    <br>
-                    This will be removed once I add autosaving feature.
-                    <br>
-                    Shortcut 4: Dough unlocked
-            </button>
-            <button id="ShortcutIcing" onclick="IcingSC()">
-                SHORTCUT!
-                <br>
-                Only use to get back to a part of the game you've already gotten to.
-                <br>
-                This will be removed once I add autosaving feature.
-                <br>
-                Shortcut 5: Icing unlocked
-            </button>
-        </div>
     </legs>
 </html> 

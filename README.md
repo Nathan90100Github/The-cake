@@ -1,10 +1,11 @@
-The Cake.
+Made by Nathan_90100 (nathan_90100 on discord)
 
-[Made for Chat's 1 year anniversary!]
+The Cake is a short incremental game where you create your own Discord group chat and send messages in it, cause arguments between the members, watch the GC get older and eventually create a cake to celebrate the GC reaching one entire year of existence.
 
-Create a cake to celebrate a group chat's 1 year of existing!
-Start by posting messages, then create arguments to reset all of your current progress and get heat.
-Then start creating candles by sacrificing messages and heat.
-Once you're done with the candles, start creating dough and icing for the cake.
+Currently has 2 reset layers, and 3 total resets.
 
-More will be coming soon!
+LAYERS AND RESETS:
+-Arguments
+-Candles
+->Candles
+->Icing
